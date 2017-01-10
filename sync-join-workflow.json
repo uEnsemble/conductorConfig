@@ -1,0 +1,59 @@
+{
+  "createTime": 0,
+  "updateTime": 1483996699371,
+  "createdBy": "test",
+  "name": "sync_build_join2",
+  "version": 0,
+  "tasks": [
+    {
+      "name": "fork_join",
+      "taskReferenceName": "forkx",
+      "type": "FORK_JOIN",
+      "forkTasks": [
+        [
+          {
+            "name": "build1",
+            "taskReferenceName": "build1",
+            "type": "SIMPLE",
+            "startDelay": 0,
+            "callbackFromWorker": true
+          }
+        ],
+        [
+          {
+            "name": "build2",
+            "taskReferenceName": "build2",
+            "type": "SIMPLE",
+            "startDelay": 0,
+            "callbackFromWorker": true
+          }
+        ]
+      ],
+      "startDelay": 0,
+      "callbackFromWorker": true
+    },
+    {
+      "name": "join",
+      "taskReferenceName": "join",
+      "type": "JOIN",
+      "startDelay": 0,
+      "joinOn": [
+        "build1",
+        "build2"
+      ],
+      "callbackFromWorker": true
+    },
+    {
+      "name": "build_join",
+      "taskReferenceName": "build_join",
+      "inputParameters": {
+        "build1": "join.output.build1",
+        "build2": "join.output.build2"
+      },
+      "type": "SIMPLE",
+      "startDelay": 0,
+      "callbackFromWorker": true
+    }
+  ],
+  "schemaVersion": 0
+}

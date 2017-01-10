@@ -1,0 +1,35 @@
+[
+  {
+    "createdBy": "test",
+    "name": "build1",
+    "description": "build1",
+    "retryCount": 0,
+    "timeoutSeconds": 0,
+    "timeoutPolicy": "TIME_OUT_WF",
+    "retryLogic": "FIXED",
+    "retryDelaySeconds": 60,
+    "responseTimeoutSeconds": 3600
+  },
+  {
+    "createdBy": "test",
+    "name": "build2",
+    "description": "build2",
+    "retryCount": 0,
+    "timeoutSeconds": 0,
+    "timeoutPolicy": "TIME_OUT_WF",
+    "retryLogic": "FIXED",
+    "retryDelaySeconds": 60,
+    "responseTimeoutSeconds": 3600
+  },
+  {
+    "createdBy": "test",
+    "name": "build_join",
+    "description": "build_join",
+    "retryCount": 0,
+    "timeoutSeconds": 0,
+    "timeoutPolicy": "TIME_OUT_WF",
+    "retryLogic": "FIXED",
+    "retryDelaySeconds": 60,
+    "responseTimeoutSeconds": 3600
+  }
+]
